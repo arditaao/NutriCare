@@ -15,12 +15,12 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width:max-content;
     justify-content: space-between;
     flex-wrap: wrap;
     height: 50px;
     color:rgb(10, 10, 10);
-    background-color: black;
+    background-color: #121a12;
     
     
 }
@@ -51,7 +51,8 @@
 #LogoCenter{
     margin-inline: 40em;
     transform: scale(3);
-    margin-top: 4em;
+    margin-top: 11em;
+    padding-left: 50px;
     
 
 
@@ -82,14 +83,16 @@
     display: flex;
     list-style: none;
     align-items: center;
-    
+    margin-right: 150px;
+    padding-top: 15px;
+
     
 }
 
 #headD ul li{
     display: flex;
-    justify-content: space-between;
-    padding-left: 10px;
+    justify-content:center;
+    padding-right: 30px;
     
 }
 
@@ -112,31 +115,36 @@
 
 #MbajtesiQuote{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100%;
-   
+    width:max-content;
+ 
 }
 .quote{
     display: flex;
-    background-color:black;
+    background-color:white;
     color: white;
     align-items: center;
-    width: 100%;
-    height: 320px;;
+    width:max-content;
+    height: 320px;
+    
+    
  
 }
 
-.quote p{
+.quote pre{
     color:white;
     text-decoration: none;
-    text-align: center;
+    text-align:center;
     font-family:'Times New Roman',serif;
     font-size: 40px;
     font-style: italic;
     font-variant: small-caps;
     font-weight: bold;  
+    padding-left: 200px;
+    
+
 }
 
 
@@ -144,13 +152,16 @@
 #search{
     line-height: 40px;
     border-radius: 30px;
-    width: 40%;
+    width: 50%;
     background-color: rgb(226, 244, 255);
     border-style: hidden;
-    padding-left: 10px;
+    padding-left: 20px;
     font-size: 17px;
    position: relative;
-   margin-top: 16em;
+   margin-bottom: 16em;
+   margin-right: 5px;
+   margin-left: 90px;
+   
    
 }
 
@@ -159,15 +170,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color:chocolate;
-    width: 100%;
-    height:100px;
+    background-color:#121a12;
+    width:100%;
+    height:60px;
     text-align: center;
     color:white;
     font-family:'Times New Roman',serif;
     font-style: italic;
     font-variant: small-caps;
-    font-weight: bold;  
     
 }
 
