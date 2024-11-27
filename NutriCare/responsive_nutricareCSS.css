@@ -1,21 +1,15 @@
 
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Fix for elements causing overflow */
-* {
-    box-sizing: border-box; /* Include padding and border in element width */
-}
-
 *{
     margin: 0;
     font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#header, #headM, .semundjet-header, .recipes-header, .nutrition-container {
+    width: 100%;      /* Make the headers span the full width of the screen */
+    margin: 0;        /* Remove any default margins */
+    text-align: center; /* Center the text inside the header */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
 
 
 #mbajtsiWeb-it{
@@ -23,14 +17,6 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;  /* Ensure the entire web container is 100% wide */
-    overflow-x: hidden;  /* Prevent overflow */
-    
-}
-
-#header, .semundjet-header, .recipes-header, .nutrition-container {
-    width: 100vw;  /* Full width */
-    overflow-x: hidden; /* Prevent horizontal scroll */
     
 }
 
@@ -38,11 +24,12 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width:100%;
+    width:max-content;
     justify-content: space-between;
     flex-wrap: wrap;
     height: 50px;
-    background-color: #1f7a1f;
+    color:rgb(10, 10, 10);
+    background-color: #121a12;
     
     
 }
@@ -58,11 +45,9 @@ html, body {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
    
 
 }
-
 
 #headM img{
     height: 70px;
@@ -75,9 +60,8 @@ html, body {
 #LogoCenter{
     margin-inline: 40em;
     transform: scale(3);
-    margin-top: 1em;
-    padding-left: 100px;
-    height: 80px;
+    margin-top: 11em;
+    padding-left: 50px;
     
 
 
@@ -104,16 +88,12 @@ html, body {
     
 }
 
-
-
-
 #headD ul{
     display: flex;
     list-style: none;
     align-items: center;
-    margin-left: 1270px;
+    margin-right: 150px;
     padding-top: 15px;
-    background-color:#1f7a1f;
 
     
 }
@@ -152,7 +132,7 @@ html, body {
 }
 .quote{
     display: flex;
-    background-color:#D1FFBD;
+    background-color:white;
     color: white;
     align-items: center;
     width:max-content;
@@ -188,7 +168,7 @@ html, body {
     font-size: 17px;
    position: relative;
    margin-bottom: 16em;
-   margin-right: 7em;
+   margin-right: 5px;
    margin-left: 90px;
    
    
@@ -199,7 +179,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color:#1f7a1f;
+    background-color:#121a12;
     width:100%;
     height:60px;
     text-align: center;
@@ -216,7 +196,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color:#1f7a1f;
+    background-color:rgb(36, 34, 34);
     width: 100%;
     height:100px;
     text-align: center;
@@ -275,7 +255,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color:#1f7a1f;
+    background-color:rgb(36, 34, 34);
     width: 100%;
     height:100px;
     text-align: center;
@@ -295,20 +275,17 @@ html, body {
 
 #dietitions{
     width: 100%;
-    background-color:#1f7a1f;
+    background-color: chocolate;
     background-repeat:repeat;
     justify-items: left;
     align-items: right;
     flex-direction: column;
     height: 80vh;
-    padding-left: 7em;
-    padding-top: 7em;
    
  
 }
 .foto-nutrition{
-    margin: 3em;
-    justify-content: center;
+    margin-inline: 30em;
     margin-top: 4em;
     float: left;
 }
@@ -318,19 +295,16 @@ html, body {
     flex-direction: column;
     align-items: right;
     justify-content: center;
-    margin-bottom: 7em;
-    margin-right: 7em;
+    margin:3em;
     width: 40%;
-    height:80%;
+    height:70%;
     border: 1px solid black;
     background-color: white;
-    margin-bottom: 4em;
+    margin-top: 4em;
     float: right;
     border-radius: 10px;
     position: static;
     text-align: center;
-   
-   
     
  
    
@@ -346,15 +320,13 @@ html, body {
 
 #register{
     width: 100%;
-    background-color:#1f7a1f;
+   background-color:rgb(36, 34, 34);
     background-repeat: no-repeat;
     flex-direction: column;
     margin-top: 1em;
     align-items: flex-end;
     justify-content: center;
     flex-basis: auto;
-    padding-left: 25em;
-
     
    
 }
@@ -367,7 +339,7 @@ html, body {
     justify-content: center;
     margin: 3em;
     width: 50%;
-    background-color:rgb(109, 215,94);
+    background-color:rgb(207, 198,198);
     border-radius: 10px;
     padding: 1em;
    
@@ -375,7 +347,7 @@ html, body {
 
 .registerText form{
     margin-top: 1em;
-   
+  
     
 }
 .username{
@@ -418,21 +390,42 @@ html, body {
 }
 
 .f1 ul li{
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .f1 ul li:first-child{
     font-size: 10pt;
     font-weight: bold;
     color: #656d74;
-    margin-right: 13em ;
 }
 
 .f1 a{
     color:  #656d74;
     text-decoration:none;
-    margin-top: 5px;
-    margin-left: 11em ;
-
 }
 
+
+
+
+/* General rule for headers to make them span the full width of the screen */
+#header, .semundjet-header, .recipes-header, .nutrition-container {
+    width: 100%;       /* Full width relative to the container */
+    margin: 0 auto;    /* Center the header */
+    text-align: center; /* Center the text inside the header */
+    box-sizing: border-box; /* Include padding/border in the total width */
+}
+
+/* Optional: Add padding for consistent spacing */
+.semundjet-header, .recipes-header, .nutrition-container {
+    padding: 10px 0;
+}
+
+/* Specific adjustments for #header */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121a12;
+    color: white;
+    padding: 10px;
+}

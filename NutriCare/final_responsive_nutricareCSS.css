@@ -1,0 +1,35 @@
+
+/* General rule for headers to make them span the full width of the screen */
+#header, .semundjet-header, .recipes-header, .nutrition-container {
+    width: 100%;         /* Full width relative to the viewport */
+    margin: 0;           /* Remove any default margins */
+    padding: 0;          /* Remove padding that could interfere */
+    text-align: center;  /* Center the text inside the header */
+    box-sizing: border-box; /* Include padding/border in the total width */
+}
+
+/* Ensure headers align with their container */
+#mbajtsiWeb-it {
+    width: 100%;         /* Full width of the page */
+    margin: 0 auto;      /* Center the entire page content */
+}
+
+/* Optional: Add consistent padding for better spacing */
+.semundjet-header, .recipes-header, .nutrition-container {
+    padding: 20px 0;     /* Adjust as necessary */
+}
+
+/* Specific adjustments for #header */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121a12;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Other container widths to ensure they take full width */
+#main, #mbajtesiRecipes, .SlideShowDietitions, #dietitions, .registerText {
+    width: 100%;         /* Ensures these elements take full width */
+}
