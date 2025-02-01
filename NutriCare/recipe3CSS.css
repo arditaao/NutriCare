@@ -27,7 +27,7 @@ html, body {
   
   h2{
     color: #486255;
-    margin-left: 1em;
+    margin-left: 0em;
 
 
   }
@@ -51,7 +51,7 @@ html, body {
     border: 2px solid #486255; /* Për një kornizë elegante */
     margin-left: 3em; /* Shtyn imazhin në të djathtë për 4 njësi */
 }
-#fotoRecipe2{
+#fotoRecipe3{
     width: 80%; /* Kufizon foton në 80% të gjerësisë */
     max-width: 300px; /* Kufizon gjerësinë maksimale në 500px */
     height: 30%;

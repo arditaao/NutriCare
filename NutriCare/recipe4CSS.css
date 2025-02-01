@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 #header{
     display: flex;
     flex-direction:row;
@@ -15,44 +16,43 @@ html, body {
     background-color:#1f7a1f;
     text-align: center;
     color:white;
-    
 
   }
+  
+
+
+  
   .body{
     font-size: larger;
     font-family:'Times New Roman', Times, serif;
+    
   }
-  h2{
+  
+h2{
     color: #486255;
     margin-left: 1em;
 
 
   }
 
-  h3{
-    color: #811010;
-    margin-left: 0em;
-    max-width: 65em;
-
-  }
-
+  
   p{
     margin-left: 2em;
     max-width: 65em;
-   
 }
+ 
   
   img {
     width: 35em; /* Gjerësia e katrorit */
     height: 500px; /* Lartësia e katrorit */
     border: 2px solid #486255; /* Për një kornizë elegante */
-    
+    margin-left: 3em; /* Shtyn imazhin në të djathtë për 4 njësi */
 }
-#fotoRecipe1{
+#fotoRecipe4{
     width: 80%; /* Kufizon foton në 80% të gjerësisë */
     max-width: 300px; /* Kufizon gjerësinë maksimale në 500px */
     height: 30%;
-    margin-left: 5em;
+    
 
 
     
