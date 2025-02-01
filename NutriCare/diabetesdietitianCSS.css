@@ -1,0 +1,43 @@
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#header{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color:#1f7a1f;
+    text-align: center;
+    color:white;
+
+}
+  
+
+
+  
+.body{
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+  
+h2{
+    color: #486255;
+    margin-left: 1em;
+
+
+  }
+ 
+img {
+    width: 35em; /* Gjerësia e katrorit */
+    height: 400px; /* Lartësia e katrorit */
+    border: 2px solid #486255; /* Për një kornizë elegante */
+    margin-left: 3em; /* Shtyn imazhin në të djathtë për 4 njësi */
+}
