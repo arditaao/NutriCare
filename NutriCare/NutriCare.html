@@ -76,17 +76,18 @@
             </div>  
 
                 
-            <!-- DIETITIONS-->
-                <header class="nutrition-container"> <h1 style="font-family:sans-serif;">MEET OUR DIETITIANS</h1></header>
-                 <div class="SlideShowDietitions">
-                        <script src="SlideShow.js"></script>
-            <div id="dietitions">
-                <img class="foto-nutrition=" src="./foto/nutritionistt1.jpg" alt=""> 
-            
-                <div class="dietitionsText">
-                    <h1>Hey! I'm Ayana</h1>
+            <!-- DIETITIANS -->
+<header class="nutrition-container">
+    <h1 style="font-family:sans-serif;">MEET OUR DIETITIANS</h1>
+</header>
 
-                    <p>I help women and men who struggle with chronic dieting, disordered eating, and body image concerns make peace with food and their bodies.
+<div class="dietitians-container">
+    <div class="dietitian">
+        <img class="foto-nutrition" src="./foto/nutritionistt1.jpg" alt="">
+        <div class="dietitian-text">
+            <h1>Hey! I'm Ayana</h1>
+            <p>
+                I help women and men who struggle with chronic dieting, disordered eating, and body image concerns make peace with food and their bodies.
 
                         I am a nutrition therapist, certified intuitive eating counselor, and macro social worker.  
                         I encourages my clients to embrace the beauty, power, and connection that their food traditions, personal experiences, and values add to their lives.
@@ -96,52 +97,153 @@
 
                         In 12 weekly sessions with me, you will discover how to trust your body, break free from food rules and diets that create feelings of failure and shame, 
                         and learn to explore joyful movement and other forms of stress reduction all while honoring your body, your personal experiences, and your values. 
-                        <br><b>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</b> </p>
-                    </div>
-                </div>
-            </div>
-        
-          <br>
-            <div class="SlideShowDietitions">
-             <div id="dietitions">
-                   <img class="foto-nutrition=" src="./foto/nutritionistt2.jpg" alt=""> 
+                <br><b><em>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</em></b>
+            </p>
+        </div>
+    </div>
 
-                <div class="dietitionsText">
-                    <h1> Hi! I'm Alexa</h1>
-                    <p>I'm a Certified Women's Health Nutritionist
+    <div class="dietitian">
+        <img class="foto-nutrition" src="./foto/nutritionistt2.jpg" alt="">
+        <div class="dietitian-text">
+            <h1>Hi! I'm Alexa</h1>
+            <p>
+                I'm a Certified Women's Health Nutritionist
                      I help women and men who struggle with Diabetes, Pre-Diabetes & Heart Disease, disordered eating...<br>
                      I encourages my clients to embrace the beauty, power, and connection that their food traditions, personal experiences, and values add to their lives.<br>
                      I am committed to increasing awareness of intuitive eating and weight inclusive philosophies in black communities. 
                      I believes that weight-centric approaches to health and wellness only serve to exacerbate body image issues,stress,
                        and anxiety which contribute to increased rates of chronic diseases often seen in black and other communities of color.
-                       <br><b>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</b> </p>
-                    <div class="banner2button"> 
-                    </div>
-                </div>
-            </div>  
+                       
+                <br><b><em>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</em></b>
+            </p>
         </div>
-        <div class="SlideShowDietitions">
-            <div id="dietitions">
-                  <img class="foto-nutrition=" src="./foto/nutritionistt3.jpg" alt=""> 
+    </div>
 
-               <div class="dietitionsText">
-                <h1>Hey! I'm Marc</h1>
-                   <p>I'm a based Intuitive Eating Registered Dietitian and nationally-recognized food and nutrition expert.<br>
+    <div class="dietitian">
+        <img class="foto-nutrition" src="./foto/nutritionistt3.jpg" alt="">
+        <div class="dietitian-text">
+            <h1>Hey! I'm Marc</h1>
+            <p>
+                I'm a based Intuitive Eating Registered Dietitian and nationally-recognized food and nutrition expert.<br>
                     The health and wellness world is a crowded space with many voices trying to reach above the rest. Partnering with a registered dietitian can elevate your message on a <br>
                     platform of credibility, authenticity, and expertise in the areas of nutrition and human health.
                     I provide dynamic, creative messages that stay true to my commitment to simplifying health and removing restriction and fear around food. I have experience in a
                     variety of media settings, including print and digital media, social media, broadcast media, podcasting, and blogging.
                        
-                        
-                       
-                       <br><b>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</b> </p>
-                   <div class="banner2button"> 
-                       <!--<button>Click for more</button> 
-                       <a href="">Click for more</a> -->
-                   </div>
-               </div>
-           </div>  
-       </div>
+                <br><b><em>Remember: If you need nutrition advice about a medical condition, you need a dietitian.</em></b>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dietitians-container {
+        position: relative;
+        width: 100%;
+        height: 350px; /* Lartësi e mjaftueshme */
+        overflow: hidden;
+    }
+
+    .dietitian {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .foto-nutrition {
+        width: 350px;
+        height: 340px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .dietitian-text {
+        margin-left: 20px;
+        flex: 1;
+        max-width: 60%;
+    }
+
+    .dietitian-text h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .dietitian-text {
+    margin-left: 20px;
+    flex: 1;
+    max-width: 60%;
+    background-color:rgb(109, 215,94); /* Sfond i lehtë */
+    border-radius: 10px; /* Kënde të rrumbullakosura */
+    padding: 20px; /* Hapësirë e mjaftueshme brenda kutisë */
+    color:rgb(3, 0, 0);
+    }
+    
+    /* Animacionet për secilin dietitian */
+    @keyframes slideShow1 {
+        0%, 33% { opacity: 1; }
+        34%, 100% { opacity: 0; }
+    }
+
+    @keyframes slideShow2 {
+        0%, 33% { opacity: 0; }
+        34%, 66% { opacity: 1; }
+        67%, 100% { opacity: 0; }
+    }
+
+    @keyframes slideShow3 {
+        0%, 66% { opacity: 0; }
+        67%, 100% { opacity: 1; }
+    }
+
+    .dietitian:nth-child(1) {
+        animation: slideShow1 15s infinite;
+    }
+
+    .dietitian:nth-child(2) {
+        animation: slideShow2 15s infinite;
+    }
+
+    .dietitian:nth-child(3) {
+        animation: slideShow3 15s infinite;
+    }
+
+    /* Përmirësime për pajisjet mobile */
+    @media (max-width: 768px) {
+        .dietitian {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .foto-nutrition {
+            width: 120px;
+            height: 120px;
+        }
+
+        .dietitian-text {
+            margin-left: 0em;
+            text-align: center;
+            max-width: 90%;
+            
+        }
+
+        .dietitian-text h1 {
+            font-size: 1.2em;
+        }
+
+        .dietitian-text p {
+            font-size: 0.9em;
+        }
+    }
+</style>
+
+
     
 
 
