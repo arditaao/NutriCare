@@ -17,7 +17,7 @@
     margin: 20px;
   }
   
-  .registartion-form {
+  .registration-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,19 +29,19 @@
     padding: 20px;
   }
   
-  .registartion-form input,
-  .registartion-form select,
-  .registartion-form textarea {
+  .registration-form input,
+  .registration-form select,
+  .registration-form textarea {
     border: none;
     padding: 5px;
     margin-top: 10px;
     font-family: sans-serif;
   }
   
-  .registartion-form input:focus,
+  .registration-form input:focus,
   
   
-  .registartion-form .submit {
+  .registration-form .submit {
     width: 100%;
     padding: 8px 0;
     font-size: 20px;

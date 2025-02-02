@@ -1,79 +1,144 @@
 <html><head><link href="CSSignUp.css" rel="stylesheet" type="text/css">
 </head><body><div class="container">
   <h1>Sign Up</h1>
-  <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+  <form name="registration" class="registration-form" onsubmit="return formValidation()">
     <table>
-      <tbody><tr>
-        <td><label for="name">Name:</label></td>
-        <td><input type="text" name="name" id="name" placeholder="your name"></td>
-      </tr>
-      <tr>
-        <td><label for="email">Email:</label></td>
-        <td><input type="text" name="email" id="email" placeholder="your email"></td>
-      </tr>
-      <tr>
-        <td><label for="password">Password:</label></td>
-        <td><input type="password" name="password" id="password"></td>
-      </tr>
-      <tr>
-        <td><label for="phoneNumber">Phone Number:</label></td>
-        <td><input type="number" name="phoneNumber" id="phoneNumber"></td>
-      </tr>
-      <tr>
-        <td><label for="gender">Gender:</label></td>
-        <td>Male: <input type="radio" name="gender" value="male">
-          Female: <input type="radio" name="gender" value="female">
-      </td></tr>
-         
-      <tr>
-        <td colspan="2"><input type="submit" class="submit" value="Sign Up"></td>
-      </tr>
-    </tbody></table>
+      <tbody>
+        <!-- Full Name -->
+        <tr>
+          <td><label for="name">First Name:</label></td>
+          <td><input type="text" name="name" id="name" placeholder="Your First Name" required></td>
+        </tr>
+
+        <tr>
+          <td><label for="surname">Last Name:</label></td>
+          <td><input type="text" name="surname" id="surname" placeholder="Your Last Name" required></td>
+        </tr>
+
+        <!-- Email -->
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" name="email" id="email" placeholder="Your Email" required></td>
+        </tr>
+
+        <!-- Username -->
+        <tr>
+          <td><label for="username">Username:</label></td>
+          <td><input type="text" name="username" id="username" placeholder="Choose a Username" required></td>
+        </tr>
+
+        <!-- Password -->
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td>
+            <input type="password" name="password" id="password" placeholder="Your Password" required>
+            <span id="togglePassword" style="cursor: pointer;">👁️</span>
+          </td>
+        </tr>
+
+        <!-- Date of Birth -->
+        <tr>
+          <td><label for="dob">Date of Birth (DD/MM/YYYY):</label></td>
+          <td><input type="text" name="dob" id="dob" placeholder="DD/MM/YYYY" required pattern="\d{2}/\d{2}/\d{4}"></td>
+        </tr>
+
+        <!-- Gender -->
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td>
+            Male: <input type="radio" name="gender" value="male" required>
+            Female: <input type="radio" name="gender" value="female" required>
+          </td>
+        </tr>
+
+        <!-- Submit Button -->
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="Sign Up"></td>
+        </tr>
+      </tbody>
+    </table>
   </form>
+
+  <!-- Success Message -->
+  <div id="successMessage" class="success-message" style="display: none;">
+    You have successfully signed up!
+  </div>
+
 </div>
 
-
 <script>
-  // Select all input elements for varification
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const phoneNumber = document.getElementById("phoneNumber");
-const gender = document.registration;
+  // Select all input elements for verification
+  const name = document.getElementById("name");
+  const surname = document.getElementById("surname");
+  const email = document.getElementById("email");
+  const username = document.getElementById("username");
+  const password = document.getElementById("password");
+  const dob = document.getElementById("dob");
+  const gender = document.registration;
+  const togglePassword = document.getElementById("togglePassword");
+  const successMessage = document.getElementById("successMessage");
 
-// function for form varification
-function formValidation() {
-  
-  // checking name length
-  if (name.value.length < 2 || name.value.length > 20) {
-    alert("Name length should be more than 2 and less than 21");
-    name.focus();
-    return false;
-  }
-  // checking email
-  if (email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-    alert("Please enter a valid email!");
-    email.focus();
-    return false;
-  }
-  // checking password
-  if (!password.value.match(/^.{5,15}$/)) {
-    alert("Password length must be between 5-15 characters!");
-    password.focus();
-    return false;
-  }
-  // checking phone number
-  if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
-    alert("Phone number must be 10 characters long number and first digit can't be 0!");
-    phoneNumber.focus();
-    return false;
-  }
-  // checking gender
-  if (gender.gender.value === "") {
-    alert("Please select your gender!");
-    return false;
-  }
- 
-}
+  // Function for form validation
+  function formValidation() {
+    // Checking name and surname length
+    if (name.value.length < 2 || name.value.length > 50) {
+      alert("First Name should be between 2 and 50 characters.");
+      name.focus();
+      return false;
+    }
 
-</script></body></html>
+    if (surname.value.length < 2 || surname.value.length > 50) {
+      alert("Last Name should be between 2 and 50 characters.");
+      surname.focus();
+      return false;
+    }
+
+    // Checking email
+    if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      alert("Please enter a valid email address.");
+      email.focus();
+      return false;
+    }
+
+    // Checking username
+    if (username.value.length < 3 || username.value.length > 20) {
+      alert("Username should be between 3 and 20 characters.");
+      username.focus();
+      return false;
+    }
+
+    // Checking password length
+    if (!password.value.match(/^.{5,15}$/)) {
+      alert("Password length must be between 5-15 characters.");
+      password.focus();
+      return false;
+    }
+
+    // Checking date of birth (format validation with regex)
+    if (!dob.value.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+      alert("Date of Birth should be in DD/MM/YYYY format.");
+      dob.focus();
+      return false;
+    }
+
+    // Checking gender selection
+    if (!gender.gender.value) {
+      alert("Please select your gender.");
+      return false;
+    }
+
+    // Display success message
+    successMessage.style.display = "block";
+
+    // Prevent form submission for demonstration purposes
+    return false;  // In a real application, you'd submit the form here
+  }
+
+  // Toggle password visibility
+  togglePassword.addEventListener('click', function () {
+    const type = password.type === 'password' ? 'text' : 'password';
+    password.type = type;
+  });
+</script>
+</body>
+</html>
